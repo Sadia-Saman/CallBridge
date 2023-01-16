@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="callbridge.DeckController">
+   <children>
+      <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1366.0" styleClass="back2" stylesheets="@back2.css">
+         <children>
+            <ImageView fx:id="hearts_six" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/six.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_four" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/four.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_two" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/two.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_eight" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/eight.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="gameStart" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#move" text="Start">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label layoutX="141.0" layoutY="375.0" onMousePressed="#drag" text="no of cards left" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="350.0" text="Left Player" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="600.0" layoutY="130.0" text="Top Player" textFill="#fffffc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="600.0" layoutY="150.0" text="Number 0f Cards left" textFill="#fcfbfa">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="myScore" layoutX="600.0" layoutY="536.0" text="You" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lebel" layoutX="604.0" layoutY="516.0" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1011.0" layoutY="395.0" text="Number of Cards left" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="1011.0" layoutY="365.0" text="Right Player" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="hearts_King" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" onMouseDragEntered="#move" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_jack" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/jack.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_queen" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_ace" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/ace.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_five" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/five.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_seven" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/seven.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_nine" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/nine.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_ace" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/Ace.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_two" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/two.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_two" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/two.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_three" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/three.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_four" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/four.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_six" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/six.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_seven" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/seven.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_nine" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/nine.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_ten" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/ten.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_jack" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/jack.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_queen" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spade_King" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/SPADES/king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_jack" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/jack.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_three" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/three.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_King" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_eight" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/eight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_ace" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/ace.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_four" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/four.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_ten" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/ten.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_five" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/five.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="diamonds_six" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/DIAMONDS/six.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_two" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/two.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_five" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/five.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_four" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/four.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_six" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/six.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_three" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/three.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_nine" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/nine.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_seven" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/seven.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_eight" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/eight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_ten" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/ten.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_jack" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/jack.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_queen" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_king" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/king.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="club_ace" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/CLUBS/Ace.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_three" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/three.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_eight" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/eight.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_nine" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/nine.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_ten" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/ten.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_queen" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/queen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_five" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/five.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hearts_seven" fitHeight="100.0" fitWidth="75.0" layoutX="683.0" layoutY="350.0" onMouseClicked="#drag" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picOfCards/HEARTS/seven.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="n" fitHeight="100.0" fitWidth="75.0" layoutX="91.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../backFace.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rightImage" fitHeight="100.0" fitWidth="75.0" layoutX="702.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="leftImage" fitHeight="100.0" fitWidth="75.0" layoutX="417.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="topImage" fitHeight="100.0" fitWidth="75.0" layoutX="585.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="myImage" fitHeight="100.0" fitWidth="75.0" layoutX="563.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
